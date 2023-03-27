@@ -50,13 +50,13 @@
     "to-regex-range": "^5.0.1",
     "touch": "^3.1.0",
     "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.2",
     "undefsafe": "^2.0.5"
   },
   "scripts": {
-    "build": "rm -rf build/ && prettier --write src/ && tsc",
-    "dev": "nodemon server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node-dev --respawn --pretty --transpile-only server.ts",
+    "dev": "nodemon server.ts"
   },
   "repository": {
     "type": "git",
